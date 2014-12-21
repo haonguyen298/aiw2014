@@ -72,6 +72,9 @@ end
     @Tourist_limit=Tourist.last(5)
   end
 
+  def about
+
+  end
 
   def details
 

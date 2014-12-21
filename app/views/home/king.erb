@@ -5,13 +5,13 @@
     <div id="templatemo_content">
 
       <div class="content_box">
-        <h2>Dynasties</h2>
+        <h2>Vietnamese Kings</h2>
         <% @Kings.each do |king| %>
             <%=image_tag king.photo, :size => "154x80", :class => "image_wrapper image_fl" %>
             <h5><%= king.name %></h5>
             <p> <%= king.summary %> </p>
 
-            <%= link_to "", {:action => 'detaildynasty', :id => king.id}, :class => "more float_r" %>
+            <%= link_to "", {:action => 'detailking', :id => king.id}, :class => "more float_r" %>
             <div class="clear h30"></div>
 
         <% end %>

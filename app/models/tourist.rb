@@ -1,6 +1,6 @@
 class Tourist < ActiveRecord::Base
   mount_uploader :photo, PictureUploader
-  has_many :kings
-  has_many :dynasties
+  belongs_to :king
+  belongs_to :dynasty
 
 end

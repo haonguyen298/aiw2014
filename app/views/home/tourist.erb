@@ -9,7 +9,7 @@
         <% @Tourists.each do |tourist| %>
             <%=image_tag tourist.photo, :size => "154x80", :class => "image_wrapper image_fl" %>
             <h5><%= tourist.name %></h5>
-            <p> <%= tourist.background_summary %> </p>
+            <p> <%= tourist.description %> </p>
 
             <%= link_to "", {:action => 'detailtourist', :id => tourist.id}, :class => "more float_r" %>
             <div class="clear h30"></div>
