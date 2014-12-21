@@ -1,0 +1,74 @@
+<div id="templatemo_main">
+
+  <div id="templatemo_content_wrapper">
+    <div id="templatemo_content_top"></div>
+    <div id="templatemo_content">
+
+      <div class="content_box">
+        <h2>Dynasties</h2>
+        <% @King_all.each do |king| %>
+            <%=image_tag king.photo, :size => "154x80", :class => "image_wrapper image_fl" %>
+            <h5><%= king.name %></h5>
+            <p> <%= king.summary %> </p>
+            <%= link_to "", {:action => 'detaildynasty', :id => king.id}, :class => "more float_r" %>
+
+            <div class="clear h30"></div>
+
+        <% end %>
+      </div>
+
+    </div> <!-- end of content -->
+
+    <div id="templatemo_content_bottom"></div>
+  </div> <!-- end of content wrapper -->
+
+  <div id="templatemo_sidebar">
+
+    <div class="sidebar_box_wrapper">
+
+      <div class="sidebar_box">
+        <div class="sb_title"><%=image_tag("categories.png", alt: "Category")%></div>
+        <div class="sb_content">
+          <% @Dynasty_limit.each do |dynasty_limit| %>
+              <ul class="tmo_list">
+                <li><%= link_to dynasty_limit.name, {:action => 'detaildynasty', :id => dynasty_limit.id} %></li>
+              </ul>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="sidebar_box">
+        <div class="sb_title"><%=image_tag("recent_blog_entries.png", alt: "Recent Blog Entries")%></div>
+        <div class="sb_content">
+          <% @Tourist_limit.each do |tourist_limit| %>
+              <ul class="tmo_list">
+                <li><%= link_to tourist_limit.name, {:action => 'detailtourist', :id => tourist_limit.id} %></li>
+              </ul>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="templatemo_cleaner"></div>
+
+    <div class="templatemo_sidebar_bottom"></div>
+
+    <div class="templatemo_cleaner"></div>
+
+    <div>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 1")%></a>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 2")%></a>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 3")%></a>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 4")%></a>
+    </div>
+
+    <div class="templatemo_cleaner"></div>
+
+
+  </div> <!-- end of sidebar -->
+
+  <div class="clear"></div>
+</div> <!-- end of main --><div class="content_box">
+
+
+</div>

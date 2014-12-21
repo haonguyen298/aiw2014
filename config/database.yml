@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  database: aiw2014
+  username: root
+  password:
+  host: 127.0.0.1
+  port: 3306
+
+development:
+  <<: *default
+  database: aiw2014
+
+test:
+  <<: *default
+  database: aiw2014
+
+production:
+  <<: *default
+  database: aiw2014

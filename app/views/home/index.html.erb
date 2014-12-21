@@ -1,0 +1,98 @@
+<div id="templatemo_main" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+     xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+  <div id="templatemo_content_wrapper">
+    <div id="templatemo_content_top"></div>
+    <div id="templatemo_content">
+
+      <div class="content_box">
+        <h2>Ancient Vietnam</h2>
+
+        <a href="#" target="_parent"><%=image_tag("ancient.jpg", alt: "ancient", class: "image_wrapper")%></a>
+        <p>According to traditional legends, Viet Nam was formed when King Lac Long Quan (also known as the "Dragon Lord of Lac" or the "Dragon Lord of the Seas") married Princess Au Co (a Chinese immortal and descended from the High Mountains).
+          She bore him 100 eggs, out of which 100 sons were born. They soon established a nation that stretched from southern China to northern Indonesia.</p>
+        <p>However, the King and the Princess became convinced that their different origins would ultimately make them unhappy, so they separated.
+          Princess Au Co took 50 of the sons with her back into the mountains while King Lac Long Quan took the other 50 sons and ruled over the lowlands.
+          After the King died in 2879 B.C., his eldest son, Hung Vuong established the Hung dynasty, and he is regarded as the real founder of the Vietnamese nation and of the first Vietnamese dynasty.</p>
+      </div>
+
+
+
+      <div class="content_box">
+        <h2>New Dynasty Blogs</h2>
+          <% @Newdynasty.each do |new_dynasty| %>
+        <a href="#" target="_parent"><%=image_tag new_dynasty.photo, :class => "image_wrapper image_fl", :size => "154x80" %></a>
+        <h5><%= new_dynasty.name %></h5>
+            <p> <%= new_dynasty.background_summary %></p>
+            <%= link_to "", {:action => 'detaildynasty', :id => new_dynasty.id}, :class => "more float_r" %>
+            <div class="clear h30"></div>
+
+        <% end %>
+
+      </div>
+
+
+
+      <div class="content_box last_box">
+        <h2>New King Blogs</h2>
+        <ul class="tmo_list">
+          <% @Newking.each do |new_king| %>
+              <li class="col_3"><%= link_to new_king.name, {:action => 'detailking', :id => new_king.id} %></li>
+              <% end %>
+        </ul>
+      </div>
+
+
+    </div> <!-- end of content -->
+    <div id="templatemo_content_bottom"></div>
+  </div> <!-- end of content wrapper -->
+
+  <div id="templatemo_sidebar">
+
+    <div class="sidebar_box_wrapper">
+
+      <div class="sidebar_box">
+        <div class="sb_title"><%=image_tag("categories.png", alt: "Category")%></div>
+        <div class="sb_content">
+
+          <% @Dynasty_limit.each do |dynasty_limit| %>
+          <ul class="tmo_list">
+            <li><%= link_to dynasty_limit.name, {:action => 'detaildynasty', :id => dynasty_limit.id} %></li>
+          </ul>
+        <% end %>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar_box">
+        <div class="sb_title"><%=image_tag("recent_blog_entries.png", alt: "Recent Blog Entries")%></div>
+        <div class="sb_content">
+          <% @King_limit.each do |king_limit| %>
+              <ul class="tmo_list">
+                <li><%= link_to king_limit.name, {:action => 'detailking', :id => king_limit.id} %></li>
+              </ul>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="templatemo_cleaner"></div>
+
+    <div class="templatemo_sidebar_bottom"></div>
+
+    <div class="templatemo_cleaner"></div>
+
+    <div>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 1")%></a>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 2")%></a>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 3")%></a>
+      <a href="#" class="ads_125"><%=image_tag("ads_125.jpg", alt: "125x125 banner 4")%></a>
+    </div>
+
+    <div class="templatemo_cleaner"></div>
+
+  </div> <!-- end of sidebar -->
+
+  <div class="clear"></div>
+</div> <!-- end of main -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vietnam Kings History Profile</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Vietnam Kings History Profile" />
+  <meta name="description" content="" />
+</head>
+
+<body>
+<div id="templatemo_wrapper_01">
+  <div id="templatemo_wrapper_02">
+
+    <div id="templatemo_header">
+      <div id="site_title">
+        <%= link_to 'Vietnam Kings History Profile', home_index_path %>
+      </div>
+
+      <div id="header_right">
+
+        <div id="search_box">
+          <form action="#" method="get">
+            <input type="text" value="Enter a keyword here..." name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+            <input type="submit" name="Search" value="" id="searchbutton" title="Search" />
+          </form>
+        </div>
+
+        <div id="templatemo_menu">
+          <ul>
+            <li><%= link_to 'Home', home_index_path %></li>
+            <li><%= link_to 'Dynasty', home_dynasty_path %></li>
+            <li><%= link_to 'King', home_king_path %></li>
+            <li><%= link_to 'Tourist', home_tourist_path %></li>
+          </ul>
+        </div> <!-- end of templatemo_menu -->
+      </div>
+    </div> <!-- end of templatemo_header -->
+
+
+<%= yield %>
+
+    <div id="templatemo_footer">
+      Copyright © 2014 <a href="#">AIW - Group20</a> |
+    </div> <!-- end of footer -->
+
+</body>
+</html>
