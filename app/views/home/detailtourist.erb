@@ -12,7 +12,9 @@
         <a href="#" target="_parent"><%=image_tag @Detailtourist.photo, :class => "image_wrapper", :size => "600x380"%></a>
         <h5> <%= @Detailtourist.name %> introduction </h5>
         <p> <%= @Detailtourist.summary %></p>
+        <div class="clear h30"></div>
 
+        <h2><%= link_to "The relevant Vietnamese King", {:action => 'detailking', :id => @Detailtourist.id} %></h2>
       </div>
 
     </div> <!-- end of content -->
@@ -60,7 +62,7 @@
     </div>
 
     <div class="templatemo_cleaner"></div>
-    
+
 
   </div> <!-- end of sidebar -->
 
